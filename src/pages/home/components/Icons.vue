@@ -58,10 +58,6 @@
                 id:"0008",
                 imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
                 desc:"热门景点"
-              },{
-                id:"0009",
-                imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-                desc:"哈哈哈大发送到发送到"
               }
             ]
           }
@@ -95,6 +91,7 @@
     overflow: hidden
     height: 0
     padding-bottom 50%
+    margin-top .1rem
     .icon
       position: relative
       overflow: hidden
