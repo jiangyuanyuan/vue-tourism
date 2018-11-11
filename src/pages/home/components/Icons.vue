@@ -16,56 +16,13 @@
 <script>
     export default {
         name: "HomeIcons",
-        data () {
-          return{
-            iconsList:[
-              {
-                id:"0001",
-                imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-                desc:"热门景点"
-              },
-              {
-                id:"0002",
-                imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-                desc:"滑雪季"
-              },
-              {
-                id:"0003",
-                imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-                desc:"泡温泉"
-              },
-              {
-                id:"0004",
-                imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-                desc:"热门景点"
-              },
-              {
-                id:"0005",
-                imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-                desc:"热门景点"
-              },
-              {
-                id:"0006",
-                imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-                desc:"热门景点"
-              },
-              {
-                id:"0007",
-                imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-                desc:"热门景点"
-              },
-              {
-                id:"0008",
-                imgUrl: "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-                desc:"热门景点"
-              }
-            ]
-          }
+        props: {
+          list:Array
         },
-      computed: {
+        computed: {
           pages () {
             const pages = []
-            this.iconsList.forEach((item,index)=>{
+            this.list.forEach((item,index)=>{
               const page = Math.floor(index/8)
               if (!pages[page]) {
                 pages[page] = []
