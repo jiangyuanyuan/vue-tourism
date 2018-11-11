@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div class="recommend-title">热销推荐</div>
+    <div class="weekend-title">周末游玩</div>
     <ul>
-      <li class="recommend-item" v-for="item of recommendList" :key="item.id">
+      <li class="weekend-item" v-for="item of weekendList" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src='item.imgUrl'/>
         </div>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
-          <button class="item-button">查看详情</button>
+
         </div>
       </li>
 
@@ -21,13 +21,13 @@
 
 <script>
   export default {
-    name: "HomeRecommend",
+    name: "HomeWeekend",
     data() {
       return {
-        recommendList: [
+        weekendList: [
           {
             id: "0001",
-            imgUrl: "https://img1.qunarzz.com/p/tts7/1805/88/73e98baf3ba5fe02.jpg_r_240x160x90_a17a75f9.jpg",
+            imgUrl: "https://img1.qunarzz.com/p/tts5/1811/8a/aa40b8ca73bf8102.jpg_r_240x160x90_12370edb.jpg",
             title: "深圳华侨城",
             desc: "浪漫的华侨城，情侣约会必去,浪漫的游乐场"
           }, {
@@ -37,7 +37,7 @@
             desc: "浪漫的华侨城，情侣约会必去,浪漫的游乐场"
           }, {
             id: "0003",
-            imgUrl: "https://img1.qunarzz.com/p/tts7/1805/88/73e98baf3ba5fe02.jpg_r_240x160x90_a17a75f9.jpg",
+            imgUrl: "https://img1.qunarzz.com/p/tts5/1811/8a/aa40b8ca73bf8102.jpg_r_240x160x90_12370edb.jpg",
             title: "深圳华侨城",
             desc: "浪漫的华侨城，情侣约会必去,浪漫的游乐场"
           }, {
@@ -54,37 +54,28 @@
 
 <style lang="stylus" scoped>
   @import "~@/assets/styles/mixins.styl"
-  .recommend-title
+  .weekend-title
     line-height: .8rem
     background: #eee
     text-indent: .2rem
     margin-top .2rem
-
-  .recommend-item
+  .item-img-wrapper
     overflow hidden
-    display flex
-    height 1.9rem
+    height 0
+    padding-bottom 33.9%
     .item-img
-      width 1.7rem
-      height 1.7rem
+      width 100%
       padding .1rem
-    .item-info
-      flex 1
-      min-width 0
-      .item-title
-        line-height .54rem
-        font-size .32rem
-        ellipsis()
-      .item-desc
-        line-height .4rem
-        color #ccc
-        ellipsis()
-      .item-button
-        line-height .44rem
-        margin-top .16rem
-        background #ff9300
-        padding .02rem
-        border-radius .06rem
-        color #fff
-        ellipsis()
+  .item-info
+    min-width 0
+    .item-title
+      line-height .54rem
+      font-size .32rem
+      padding-left .1rem
+      ellipsis()
+    .item-desc
+      line-height .4rem
+      color #ccc
+      padding-left .1rem
+      ellipsis()
 </style>
