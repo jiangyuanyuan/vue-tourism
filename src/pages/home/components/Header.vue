@@ -35,11 +35,12 @@ export default {
       float: left
       .back-left
         text-align center
-        font-size .2rem
+        font-size .32rem
     .header-right
       width: 1.24rem
       float: right
       text-align center
+      color: #fff
     .header-input
       flex: 1
       height .64rem
