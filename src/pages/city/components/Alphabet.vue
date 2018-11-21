@@ -19,6 +19,12 @@
       props:{
         cities: Object
       },
+      data(){
+        return{
+          touchStatus: false,
+          timer:null
+        }
+      },
       computed:{
         letters(){
           const letters = []
@@ -37,15 +43,18 @@
         },
         handleTouchMove(e){
           if(this.touchStatus){
-            const startY = document.getElementById("A").offsetTop
-            const touchY = e.targetTouches[0].clientY
-            const index = Math.floor((touchY - startY)/20)
-            if (index>=0 && index< this.letters.length){
-              this.$emit('change',this.letters[index])
+            if(this.timer){
+              clearTimeout(this.timer)
             }
-            console.log(startY)
-            console.log(touchY)
-            console.log(index)
+            this.timer = setTimeout( () =>{
+              const startY = document.getElementById("A").offsetTop
+              const touchY = e.targetTouches[0].clientY
+              const index = Math.floor((touchY - startY)/20)
+              if (index>=0 && index< this.letters.length){
+                this.$emit('change',this.letters[index])
+              }
+            },16)
+
           }
         },
         handleTouchEnd(){
