@@ -42,6 +42,7 @@
         // alert(name)
         this.$store.commit('changeCity',city)
         this.keyword = ''
+        this.$router.push('/')
       }
     },
     watch:{

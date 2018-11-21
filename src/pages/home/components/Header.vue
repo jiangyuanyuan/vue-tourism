@@ -37,9 +37,10 @@ export default {
         text-align center
         font-size .32rem
     .header-right
-      width: 1.24rem
+      min-width: 1.04rem
       float: right
       text-align center
+      padding-left .1rem
       color: #fff
     .header-input
       flex: 1

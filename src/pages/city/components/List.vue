@@ -23,7 +23,9 @@
       <div class="area" v-for="(item , key) of cities" :key="key" :id="key">
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list">
-          <div class="item border-bottom" v-for="innerItem of item" :key="innerItem.id">
+          <div class="item border-bottom" v-for="innerItem of item" :key="innerItem.id"
+               @click="handleCityClick(innerItem.name)"
+          >
             {{innerItem.name}}
           </div>
         </div>
@@ -59,6 +61,7 @@
       handleCityClick(city){
         // alert(name)
         this.$store.commit('changeCity',city)
+        this.$router.push('/')
       }
 
     },
