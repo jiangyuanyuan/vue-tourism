@@ -24,33 +24,6 @@
     name: "HomeWeekend",
     props: {
       list: Array
-    },
-    data() {
-      return {
-        weekendList: [
-          {
-            id: "0001",
-            imgUrl: "https://img1.qunarzz.com/p/tts5/1811/8a/aa40b8ca73bf8102.jpg_r_240x160x90_12370edb.jpg",
-            title: "深圳华侨城",
-            desc: "浪漫的华侨城，情侣约会必去,浪漫的游乐场"
-          }, {
-            id: "0002",
-            imgUrl: "https://img1.qunarzz.com/p/tts7/1805/88/73e98baf3ba5fe02.jpg_r_240x160x90_a17a75f9.jpg",
-            title: "深圳华侨城",
-            desc: "浪漫的华侨城，情侣约会必去,浪漫的游乐场"
-          }, {
-            id: "0003",
-            imgUrl: "https://img1.qunarzz.com/p/tts5/1811/8a/aa40b8ca73bf8102.jpg_r_240x160x90_12370edb.jpg",
-            title: "深圳华侨城",
-            desc: "浪漫的华侨城，情侣约会必去,浪漫的游乐场"
-          }, {
-            id: "0004",
-            imgUrl: "https://img1.qunarzz.com/p/tts7/1805/88/73e98baf3ba5fe02.jpg_r_240x160x90_a17a75f9.jpg",
-            title: "深圳华侨城",
-            desc: "浪漫的华侨城，情侣约会必去,浪漫的游乐场"
-          }
-        ]
-      }
     }
   }
 </script>
